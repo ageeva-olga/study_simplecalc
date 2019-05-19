@@ -6,7 +6,11 @@ namespace calcTest
 {
     public class Calc
     {
-       
+       /// <summary>
+       /// It is main function for Calc program
+       /// </summary>
+       /// <param name="expression">an expression gor calculation</param>
+       /// <returns></returns>
         public double Calculate(string expression)
         {   
             Stack<int> stack = new Stack<int>();
@@ -15,7 +19,7 @@ namespace calcTest
             if (!expression.Contains("("))
                 return double.Parse(expression);
 
-            for(int i=0; i< expression.Length; i++)
+            for(int i=0; i<expression.Length; i++)
             {
                 var chr = expression[i];
                 if (chr == '(')
@@ -88,7 +92,5 @@ namespace calcTest
             }
             return result;
         }
-
-
     }
 }
